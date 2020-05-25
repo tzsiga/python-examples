@@ -1,26 +1,26 @@
 # lists
 
 # list (array)
-arr = ['foo', 'bar']
-print('list:', arr)
-print('type:', type(arr))
+lst = ['foo', 'bar']
+print('list:', lst)
+print('type:', type(lst))
 
 # length
-print('length:', len(arr))
+print('length:', len(lst))
 
 # add new item to end
-arr.append('baz')
-print('append:', arr)
+lst.append('baz')
+print('append:', lst)
 
 # pick last item
-print('pop:', arr.pop())
-print(arr)
+print('pop:', lst.pop())
+print(lst)
 
 # check value in array
-print('includes:', 'foo' in arr)
+print('includes:', 'foo' in lst)
 
 # clone array
-cl = arr.copy()
+cl = lst.copy()
 print('clone:', cl)
 
 # sort array by values
@@ -31,5 +31,5 @@ cl.sort()
 print('sort:', cl)
 
 # reverse
-arr.reverse()
-print('reverse:', arr)
+lst.reverse()
+print('reverse:', lst)
