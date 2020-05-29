@@ -12,7 +12,7 @@ end = 13
 step = 2
 
 for i in range(start, end, step):
-    print(i)
+  print(i)
 
 # ----------
 print(next(subtitle))
@@ -58,7 +58,7 @@ print('reduce', shortest)
 # same with a simple loop
 shortest_alt = lengths[0]
 for l in lengths:
-    shortest_alt = l if l < shortest_alt else shortest_alt
+  shortest_alt = l if l < shortest_alt else shortest_alt
 print('reduce', shortest_alt)
 
 # ----------

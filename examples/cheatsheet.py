@@ -2,7 +2,7 @@
 # =================
 
 dir(list)                                   # list available methods on object
-help(list.copy)                             # display help on particular method / function
+help(list.copy)                             # display help of something
 type(13)                                    # get type name of something
 callable(obj)                               # check if obj is a function
 
@@ -46,16 +46,12 @@ words.items()
 range(length)
 range(start, end, step)
 
-min()
-max()
-abs()
-
 import random
-random.random()                             # give a random number between [0, 1)
-random.uniform(start, end)                  # random number between [start, end)
+random.random()                             # give a random number in [0, 1)
+random.uniform(start, end)                  # random number in [start, end)
 random.normalvariate(mean, deviation)       # random number by normal distr
 random.randint(start, end)                  # random int from range
-random.choice(['rock', 'paper', 'scissors'])    # random element from a list
+random.choice(['rock', 'paper', 'scissors'])  # random element from a list
 
 for i in lst:
 for idx, item in enumerate(lst):
@@ -69,20 +65,24 @@ list(filter(lambda w: len(w) > 3, lst))     # filter
 from functools import reduce                # reduce
 reduce((lambda x, y: x if x < y else y), lst)
 
-a = lambda x, y = 13: x + y                 # lambda with default argument value
-def b(n, pow = 2):                          # function with named param
-    return n ** pow
-b(pow = 3, n = 3)
+lambda x, y = 13: x + y                     # lambda with default argument value
+def fn(n, pow=2):                           # function with named param
+  return n ** pow
+b(pow=3, n=3)
 
 class SampleClass:                          # class
-    def __init__(self, arr):
-        self.arr = arr
+  def __init__(self, arr):
+    self.arr = arr
 
-    def arrLength(self):
-        return len(self.arr)
+  def arrLength(self):
+    return len(self.arr)
 
 import datetime
 import math
+
+min()
+max()
+abs()
 
 import re                                   # regex
 match_obj = re.search(r'[1-9]', 'input 123')
