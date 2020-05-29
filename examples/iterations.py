@@ -36,26 +36,30 @@ print(next(subtitle))
 # map
 words = 'foo barr ba azzzz'
 lengths = list(map(lambda w: len(w), words.split()))
-print('lengths', lengths)
+print('map', lengths)
 
 # same with list comprehension
 lengths_alt = [len(word) for idx, word in enumerate(words.split())]
-print('lengths', lengths_alt)
+print('map', lengths_alt)
 
 # filter
 longs = list(filter(lambda w: len(w) > 3, words.split()))
-print(longs)
+print('filter', longs)
+
+# same with list comprehension
+longs_alt = [word for idx, word in enumerate(words.split()) if len(word) > 3]
+print('filter', longs_alt)
 
 # reduce
 # from functools import reduce
 shortest = reduce((lambda x, y: x if x < y else y), lengths)
-print(shortest)
+print('reduce', shortest)
 
 # same with a simple loop
 shortest_alt = lengths[0]
 for l in lengths:
     shortest_alt = l if l < shortest_alt else shortest_alt
-print(shortest_alt)
+print('reduce', shortest_alt)
 
 # ----------
 print(next(subtitle))

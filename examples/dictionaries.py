@@ -11,3 +11,4 @@ words = { 'foo': 'FOO', 'bar': 'BAR' }
 
 print(words.keys())
 print(words.values())
+print(words.items())

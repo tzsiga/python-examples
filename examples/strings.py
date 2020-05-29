@@ -29,3 +29,4 @@ print('fooOOoo'.title())
 
 # isdigit
 print('13'.isdigit())
+print('Foo'.startswith('F'))
