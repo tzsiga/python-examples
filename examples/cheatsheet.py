@@ -6,6 +6,17 @@ help(list.copy)                             # display help of something
 type(13)                                    # get type name of something
 callable(obj)                               # check if obj is a function
 
+all(iterable)                         # True if all elements of the iterable are true
+any(iterable)                         # True if any element of the iterable is true
+
+reversed(iterable)                          # return a reverse iterator
+sorted(iterable, key)                       # sort iterable by key sorting fn
+
+abs(iterable)
+max(iterable)
+min(iterable)
+sum(iterable)
+
 raise TypeError('Error description here')   # throw exception
 
 a if condition else b                       # ternary expression
@@ -19,6 +30,7 @@ list('FooOOOo')                             # split string by characters
 'fooOOoo'.title()                           # sentence case
 '13'.isdigit()                              # check if string means a number
 'Foo'.startswith('F')                       # check first character
+'{:02d}'.format(8)                          # leading zero
 
 lst = ['foo  ', 'bar ', 'baz']
 len(lst)                                    # length of list
@@ -79,10 +91,6 @@ class SampleClass:                          # class
 
 import datetime
 import math
-
-min()
-max()
-abs()
 
 import re                                   # regex
 match_obj = re.search(r'[1-9]', 'input 123')
