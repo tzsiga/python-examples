@@ -53,9 +53,16 @@ print('reverse:', lst)
 print(nums + lst)
 print([*nums, *lst])
 
+# repeat lists
+long_lst = nums * 3
+print(long_lst)
+
+# select part
+print(long_lst[1:3])
+
 # ----------
 
-# tuples
+# tuples: same as lists, but cannot modify
 subtitle = create_subtitle('tuples')
 
 # ----------

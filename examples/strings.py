@@ -9,6 +9,15 @@ print(next(subtitle))
 print_methods(str)
 
 # ----------
+
+# string is like a list of chars
+# list operations should work on strings too
+
+'v1 string'
+"v2 string"
+'''v3 string'''
+
+# ----------
 print(next(subtitle))
 
 # split string by spaces
@@ -30,3 +39,8 @@ print('fooOOoo'.title())
 # isdigit
 print('13'.isdigit())
 print('Foo'.startswith('F'))
+
+# format
+"foo {} {}".format("bar", "baz")
+"foo {1} {0}".format("bar", "baz")
+"foo {x} {y}".format(y="bar", x="baz")

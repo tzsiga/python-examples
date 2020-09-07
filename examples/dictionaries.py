@@ -1,5 +1,10 @@
 from utils import create_subtitle
 
+d = dict()
+
+# (shallow!) copy
+dict(d)
+
 # dictionaries
 subtitle = create_subtitle('dictionaries')
 

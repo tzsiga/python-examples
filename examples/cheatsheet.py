@@ -1,6 +1,18 @@
 # python cheatsheet
 # =================
 
+# style guide
+# https://www.python.org/dev/peps/pep-0008/
+
+# base types
+# string, number, boolean, list, tuple, dict
+
+global x
+x = 13
+
+# type conversion
+type(int('13'))
+
 dir(list)                                   # list available methods on object
 help(list.copy)                             # display help of something
 type(13)                                    # get type name of something
@@ -58,6 +70,8 @@ words.items()
 range(length)
 range(start, end, step)
 
+import numpy as np                          # for advanced calculations
+
 import random
 random.random()                             # give a random number in [0, 1)
 random.uniform(start, end)                  # random number in [start, end)
@@ -67,6 +81,15 @@ random.choice(['rock', 'paper', 'scissors'])  # random element from a list
 
 for i in lst:
 for idx, item in enumerate(lst):
+
+for _ in range(2):
+  print(_)
+
+for x in [0,1,2]:                           # for - else
+    if x == 3:
+        break
+else:
+    print("not found")
 
 list(map(lambda w: len(w), lst))            # list mapping with lambda
 [len(w) for w in lst]                       # same with list comprehension
@@ -82,6 +105,17 @@ def fn(n, pow=2):                           # function with named param
   return n ** pow
 b(pow=3, n=3)
 
+def something(first: str, second: int) -> str:
+	'''
+    help text here
+  '''
+	return first + second                     # help text
+
+something(second=13, first="foo")           # named arguments
+
+def getTuple(first: str, second: int) -> tuple:
+	return first, second                      # return multiple values
+
 class SampleClass:                          # class
   def __init__(self, arr):
     self.arr = arr
@@ -95,3 +129,14 @@ import math
 import re                                   # regex
 match_obj = re.search(r'[1-9]', 'input 123')
 value = match_obj.group()
+
+# read files
+with open(file_to_read) as infile:
+  for index, line in enumerate(infile):
+    print(index, line)
+
+# serialize everything
+import pickle
+
+with open("dump.pkl", "wb") as f:
+	pickle.dump(something, f)

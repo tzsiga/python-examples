@@ -13,4 +13,10 @@ class SampleClass:
   def arrLength(self):
     return len(self.arr)
 
+  def _softProtectedMethod(self):
+    print('method 1')
+
+  def __protectedMethod(self):
+    print('method 2')
+
 print(SampleClass([1, 2, 3]).arrLength())
